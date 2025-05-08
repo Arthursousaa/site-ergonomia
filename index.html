@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ergonomia no Trabalho</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Ergonomia no Trabalho</h1>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#dicas">Dicas</a></li>
+                <li><a href="#video">Vídeo</a></li>
+                <li><a href="#autoavaliacao">Autoavaliação</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="sobre">
+        <h2>O que é Ergonomia?</h2>
+        <p>Ergonomia é a ciência que estuda as condições ideais de trabalho, promovendo conforto, segurança e eficiência.</p>
+        <img src="ergonomia.jpg" alt="Trabalho ergonômico" width="300">
+    </section>
+
+    <section id="dicas">
+        <h2>Dicas Práticas</h2>
+        <ul>
+            <li>Posicione o monitor na altura dos olhos.</li>
+            <li>Use uma cadeira com encosto adequado.</li>
+            <li>Faça pausas a cada 60 minutos.</li>
+            <li>Mantenha os pés apoiados no chão.</li>
+        </ul>
+    </section>
+
+    <section id="video">
+        <h2>Vídeo Educativo</h2>
+        <p>Assista ao vídeo abaixo para aprender boas práticas de ergonomia:</p>
+        <iframe width="360" height="215" src="https://www.youtube.com/embed/CO3racIlTcg" 
+                title="Ergonomia para o trabalho" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <section id="autoavaliacao">
+      <h2>Autoavaliação Ergonômica</h2>
+      <form id="formAvaliacao" onsubmit="avaliar(event)">
+          <p>1. Você faz pausas regulares durante o trabalho?</p>
+          <label><input type="radio" name="pausas" value="sim"> Sim</label>
+          <label><input type="radio" name="pausas" value="nao"> Não</label>
+  
+          <p>2. Sua cadeira tem apoio lombar?</p>
+          <label><input type="radio" name="cadeira" value="sim"> Sim</label>
+          <label><input type="radio" name="cadeira" value="nao"> Não</label>
+  
+          <p>3. Seu monitor está na altura dos olhos?</p>
+          <label><input type="radio" name="monitor" value="sim"> Sim</label>
+          <label><input type="radio" name="monitor" value="nao"> Não</label>
+  
+          <br><br>
+          <button type="submit">Ver Resultado</button>
+      </form>
+      <div id="resultado"></div>
+  </section>
+  
+    <section id="contato">
+        <h2>Contato</h2>
+        <form onsubmit="enviarFormulario(event)">
+            <label for="nome">Nome:</label><br>
+            <input type="text" id="nome" name="nome" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="mensagem">Mensagem:</label><br>
+            <textarea id="mensagem" name="mensagem" rows="4" required></textarea><br><br>
+
+            <button type="submit">Enviar</button>
+        </form>
+        <p id="respostaForm"></p>
+    </section>
+
+    <footer>
+        <p>© 2025 Projeto de Extensão - Ergonomia no Trabalho</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
